@@ -1,0 +1,84 @@
+/* Gutter Icons */
+.line-numbers {
+    position: relative;
+}
+
+.gutter-icon {
+    position: absolute;
+    left: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
+}
+
+.gutter-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.gutter-icon.added {
+    border: 2px solid currentColor;
+}
+
+.gutter-icon.edited {
+    border: 2px solid currentColor;
+    opacity: 0.9;
+}
+
+/* Range marker indicators */
+.gutter-icon.range-start {
+    position: relative;
+}
+
+.gutter-icon.range-start::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 2px;
+    height: calc(1.5em * var(--range-height, 1));
+    background: currentColor;
+    opacity: 0.5;
+    transform: translateX(-50%);
+}
+
+.gutter-icon.range-end {
+    font-size: 0.6rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 0;
+    background: transparent;
+    color: currentColor;
+}
+
+/* Tooltip for gutter icons */
+.gutter-icon[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: pre-line;
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-main);
+    max-width: 200px;
+}
+

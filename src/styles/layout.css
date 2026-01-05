@@ -1,0 +1,135 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(5, 5, 5, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-transform: lowercase;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-primary-outline,
+.btn-secondary {
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s var(--easing);
+    font-size: 0.95rem;
+}
+
+.btn-primary-outline {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-text);
+}
+
+.btn-primary-outline:hover {
+    border-color: var(--color-text);
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: #000;
+    box-shadow: 0 0 15px var(--color-primary-dim);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 153, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    color: var(--color-text-dim);
+}
+
+.btn-secondary:hover {
+    color: var(--color-text);
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 1rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+}
+
+/* Removed text-gradient - using solid color instead */
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--color-text-dim);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+/* Hero Visual */
+.hero-visual {
+    width: 100%;
+    max-width: 1000px;
+    perspective: 1000px;
+}
+
+.dual-editor-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    transform: rotateX(2deg);
+    transition: transform 0.5s var(--easing);
+}
+
+.dual-editor-container:hover {
+    transform: rotateX(0deg) scale(1.01);
+}
+

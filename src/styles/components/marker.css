@@ -1,0 +1,153 @@
+/* Marker Layer */
+.marker-layer {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10 !important;
+    overflow: visible;
+}
+
+/* Marker */
+.marker {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 1.5em;
+    background: rgba(0, 255, 153, 0.15);
+    border-left: 3px solid var(--color-primary);
+    display: flex !important;
+    align-items: center;
+    transition: opacity 0.2s ease;
+    animation: marker-appear 0.3s ease;
+    z-index: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@keyframes marker-appear {
+    from {
+        opacity: 0;
+        transform: translateX(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.marker::after {
+    content: attr(data-label);
+    position: absolute;
+    right: 10px;
+    background: var(--color-primary);
+    color: black;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: var(--font-main);
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.marker.user-a {
+    background: rgba(0, 255, 153, 0.15);
+    border-color: var(--color-primary);
+}
+
+.marker.user-a::after {
+    background: var(--color-primary);
+    color: black;
+}
+
+.marker.user-b {
+    background: rgba(189, 147, 249, 0.15);
+    border-color: #bd93f9;
+}
+
+.marker.user-b::after {
+    background: #bd93f9;
+    color: white;
+}
+
+/* Line added markers - different color to indicate new line */
+.marker.line-added {
+    background: rgba(0, 255, 153, 0.2);
+    border-left-width: 4px;
+}
+
+.marker.line-added.user-b {
+    background: rgba(189, 147, 249, 0.2);
+}
+
+/* Line edited markers - standard styling */
+.marker.line-edited {
+    background: rgba(0, 255, 153, 0.15);
+    border-left-width: 3px;
+}
+
+.marker.line-edited.user-b {
+    background: rgba(189, 147, 249, 0.15);
+}
+
+/* Persistent markers (pushed edits) - slightly different styling */
+.marker.persistent {
+    opacity: 1 !important;
+    border-left-width: 3px;
+    border-style: solid;
+}
+
+.marker.persistent.line-added {
+    border-left-width: 3px;
+}
+
+.marker.persistent::after {
+    font-size: 0.65rem;
+    opacity: 0.9;
+}
+
+/* Range markers - span multiple lines */
+.marker.range-marker {
+    height: auto;
+    min-height: 1.5em;
+}
+
+/* Line highlighting for modified/created lines */
+.code-editor [data-highlight-line] {
+    position: relative;
+}
+
+.code-editor [data-highlight-line].line-edited {
+    background: rgba(0, 255, 153, 0.1);
+    border-left: 2px solid rgba(0, 255, 153, 0.5);
+    padding-left: 4px;
+    margin-left: -4px;
+}
+
+.code-editor [data-highlight-line].line-added {
+    background: rgba(0, 255, 153, 0.15);
+    border-left: 3px solid rgba(0, 255, 153, 0.7);
+    padding-left: 4px;
+    margin-left: -4px;
+}
+
+.code-editor [data-highlight-line].line-conflict {
+    background: rgba(255, 100, 100, 0.2);
+    border-left: 3px solid rgba(255, 100, 100, 0.8);
+    padding-left: 4px;
+    margin-left: -4px;
+    animation: conflict-pulse 2s infinite;
+}
+
+@keyframes conflict-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+

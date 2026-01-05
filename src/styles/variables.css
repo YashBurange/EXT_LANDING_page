@@ -1,0 +1,15 @@
+:root {
+    --color-primary: #00FF99;
+    --color-primary-dim: rgba(0, 255, 153, 0.1);
+    --color-bg: #050505;
+    --color-surface: #111;
+    --color-text: #fff;
+    --color-text-dim: #888;
+
+    --font-main: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --font-display: 'Orbitron', sans-serif;
+
+    --easing: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
