@@ -20,7 +20,7 @@
 
     <header>
         <nav>
-            <div class="logo">synq.</div>
+            <a href="https://www.synq.website/" class="logo">synq.</a>
             <div class="nav-buttons">
                 <a href="https://marketplace.visualstudio.com/items?itemName=Synq.Synq" class="btn-primary"
                     target="_blank">VS Code</a>
@@ -37,7 +37,8 @@
                 <p>The collaboration tool for your AI and developers. Seamlessly sync code across teammates and agents.
                 </p>
                 <div class="cta-group">
-                    <a href="#" class="btn-primary">Install for Free</a>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=Synq.Synq" class="btn-primary"
+                        target="_blank">Install for Free</a>
                 </div>
             </div>
 
@@ -60,14 +61,7 @@
                             <div class="line-numbers" id="line-numbers-a">
                                 <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
                             </div>
-                            <div class="code-editor" contenteditable="true" id="editor-a" spellcheck="false">function optimizeData(data) {
-    return data.reduce((acc, item) => {
-        acc[item.id] = item;
-        return acc;
-    }, {});
-}
-
-const result = optimizeData(users);</div>
+                            <div class="code-editor" contenteditable="true" id="editor-a" spellcheck="false"></div>
                             <div class="marker-layer" id="marker-layer-a"></div>
                         </div>
                         <div class="status-bar">
@@ -97,14 +91,7 @@ const result = optimizeData(users);</div>
                             <div class="line-numbers" id="line-numbers-b">
                                 <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
                             </div>
-                            <div class="code-editor" contenteditable="true" id="editor-b" spellcheck="false">function optimizeData(data) {
-    return data.reduce((acc, item) => {
-        acc[item.id] = item;
-        return acc;
-    }, {});
-}
-
-const result = optimizeData(users);</div>
+                            <div class="code-editor" contenteditable="true" id="editor-b" spellcheck="false"></div>
                             <div class="marker-layer" id="marker-layer-b"></div>
                         </div>
                         <div class="status-bar">
@@ -123,14 +110,16 @@ const result = optimizeData(users);</div>
         <section class="features" id="features">
             <div class="section-header fade-in-up">
                 <h2>Real-time Line Awareness</h2>
-                <p>See which lines your teammates are editing on the same Git branch—only metadata is shared, never file contents.</p>
+                <p>See which lines your teammates are editing on the same Git branch—only metadata is shared, never file
+                    contents.</p>
             </div>
-            
+
             <div class="info-panel fade-in-up delay-1" data-spotlight>
                 <div class="card-content">
                     <div class="panel-section">
                         <h3 class="panel-title">Quick Start</h3>
-                        <p class="panel-description">You don't need to do anything. It sets rooms up automatically with your teammates based on your GitHub repository.</p>
+                        <p class="panel-description">You don't need to do anything. It sets rooms up automatically with
+                            your teammates based on your GitHub repository.</p>
                         <ul class="feature-list">
                             <li>Install the extension from the VS Code marketplace</li>
                             <li>Open a Git repository in VS Code</li>
@@ -142,24 +131,31 @@ const result = optimizeData(users);</div>
                     <div class="panel-section">
                         <h3 class="panel-title">Features</h3>
                         <ul class="feature-list">
-                            <li><strong>Real-time collaboration:</strong> See what your teammates are editing in real-time</li>
-                            <li><strong>Branch-scoped:</strong> Only see edits from teammates on the same Git branch</li>
-                            <li><strong>Privacy-focused:</strong> Only metadata is shared (file paths, line numbers), never file contents</li>
+                            <li><strong>Real-time collaboration:</strong> See what your teammates are editing in
+                                real-time</li>
+                            <li><strong>Branch-scoped:</strong> Only see edits from teammates on the same Git branch
+                            </li>
+                            <li><strong>Privacy-focused:</strong> Only metadata is shared (file paths, line numbers),
+                                never file contents</li>
                             <li><strong>Auto-connect:</strong> Automatically connects when you open a workspace</li>
-                            <li><strong>GitHub integration:</strong> Auto-detects your GitHub username and repository information</li>
+                            <li><strong>GitHub integration:</strong> Auto-detects your GitHub username and repository
+                                information</li>
                         </ul>
                     </div>
 
                     <div class="panel-section">
                         <h3 class="panel-title">How It Works</h3>
-                        <p class="panel-description">Synq creates isolated "rooms" based on your repository and branch. Only teammates working on the same branch will see each other's editing activity. The extension sends lightweight metadata about your edits:</p>
+                        <p class="panel-description">Synq creates isolated "rooms" based on your repository and branch.
+                            Only teammates working on the same branch will see each other's editing activity. The
+                            extension sends lightweight metadata about your edits:</p>
                         <ul class="feature-list">
                             <li>File path</li>
                             <li>Line numbers being edited</li>
                             <li>Edit type (insert, replace, delete)</li>
                             <li>Timestamp</li>
                         </ul>
-                        <p class="panel-description">No file contents are ever transmitted—only metadata about where you're editing.</p>
+                        <p class="panel-description">No file contents are ever transmitted—only metadata about where
+                            you're editing.</p>
                     </div>
 
                     <div class="panel-section">

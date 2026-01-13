@@ -72,9 +72,12 @@
 }
 
 @keyframes pulse-dot {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
@@ -209,4 +212,3 @@
         padding: 1rem;
     }
 }
-
